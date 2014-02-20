@@ -3,6 +3,9 @@ klip
 
 A simple tool for parsing Kindle clippings. Inspired by [kindle-my-clippings](https://github.com/baniol/kindle-my-clippings), klip is meant to do nothing more than convert your Kindle "My Clippings.txt" file into a javascript object.
 
+## Installation
+
+`npm install klip`
 
 ## API
 
