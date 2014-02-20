@@ -44,5 +44,21 @@ describe('klip', function(){
 			klip.exportJson(testFromPath, testToPath, done);
 		});		
 
+		it('should export actual file', function(done){
+			if(fs.existsSync(testToPath)) {
+				fs.unlinkSync(testToPath)
+			}
+
+			klip.exportJson(testFromPath, testToPath, function(err){
+				if(err){
+					done(err);
+				}
+
+				assert.ok(fs.existsSync(testToPath));
+				done()
+			});	
+			
+		});	
+
 	});
 })
