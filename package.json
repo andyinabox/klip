@@ -10,6 +10,10 @@
     "klippings",
     "books"
   ],
+  "repository": {
+  	"type":"git",
+  	"url":"https://github.com/andyinabox/klip"
+  },
   "license": "MIT",
   "devDependencies": {
     "mocha": "~1.17.1"
