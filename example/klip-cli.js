@@ -1,7 +1,7 @@
 var fs = require('fs'),
 	klip = require('../index'),
 	flagRegEx = /-([A-z])+/,
-	flages,
+	flags,
 	inPath,
 	outPath,
 	options = {};
