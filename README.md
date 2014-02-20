@@ -3,6 +3,8 @@ klip
 
 A simple tool for parsing Kindle clippings. Inspired by [kindle-my-clippings](https://github.com/baniol/kindle-my-clippings), klip is meant to do nothing more than convert your Kindle "My Clippings.txt" file into a javascript object.
 
+You can see an example of the output in [data/clippings.json](data/clippings.json), and a simple usage example as a command-line tool in [example/klip-cli.js](example/klip-cli.js).
+
 ## Installation
 
 `npm install klip`
@@ -11,7 +13,46 @@ A simple tool for parsing Kindle clippings. Inspired by [kindle-my-clippings](ht
 
 ### klip.parse(filePath, [options], callback)
 
+#### options
+
+_There are no configuration options for the parser currently._
+
+#### callback
+
+The callback returns two arguments
+
+ * `err`: returns an error if there is one
+ * `data`: contents of the files as a javascript object
+
+#### example
+
+ 	var klip = require('klip');
+ 	klip.parse('data/My Clippings.txt', function(err, data) {
+ 		if(!err) {
+ 			console.log('data parsed successfully!', data);
+ 		}
+ 	});
+
 ### klip.exportJson(inputPath, outputPath, [options], [callback])
+
+#### options
+
+ * `pretty`: set to `true` if you want json to look pretty (defaults to `false`)
+
+#### callback
+
+The callback returns one argument
+
+ * `err`: returns an error if there is one
+
+#### example
+
+	var klip = require('klip');
+	klip.exportJson('data/My Clippings.txt', 'data/clippings.json', function(err){
+		if(!err) {
+			console.log('success!');
+		}
+	});
 
 ## License
 
