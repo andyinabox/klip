@@ -1,0 +1,17 @@
+{
+  "name": "klip",
+  "version": "0.0.1",
+  "description": "A simple tool for parsing Kindle clippings into javascript",
+  "author": "Andy Dayton <admayton@gmail.com>",
+  "main": "index.js",
+  "keywords": [
+    "amazon",
+    "kindle",
+    "klippings",
+    "books"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "mocha": "~1.17.1"
+  }
+}
