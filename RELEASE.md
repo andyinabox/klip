@@ -4,6 +4,11 @@ klip
 Release Notes
 -------------
 
+### 0.0.6
+
+ * Moved CLI functionality to made module
+ * Document CLI functionality in README
+
 ### 0.0.5
 
  * Miscellanious tweaks to initial release
@@ -16,10 +21,9 @@ Release Notes
 Future Milestones
 -----------------
 
-### 0.2.0
+### 0.1.0
 
  - add `groupBooks` option to parser
- - move CLI functionality to [index.js](index.js)
 
 ### 0.3.0
 

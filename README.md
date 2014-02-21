@@ -54,6 +54,28 @@ The callback returns one argument
 		}
 	});
 
+## CLI
+
+You can also run klip as a command-line tool. If you plan to use this functionality you might want to install the node module globally:
+
+	npm install klip -g
+
+The signiture is:
+
+	klip -[flags] [input] [output]
+	   -h - show help
+	   -p - set options.prettyto true
+	   -t - set options.sortByTitleto true
+	   -a - set options.sortByAuthorto true
+
+For example:
+
+	klip -p -p data/My\ Clippings.txt data/clippings.json
+
+Or you can access the help via
+
+	klip -h
+
 ## License
 
 
