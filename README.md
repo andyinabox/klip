@@ -58,7 +58,7 @@ The callback returns one argument
 
 You can also run klip as a command-line tool. If you plan to use this functionality you might want to install the node module globally:
 
-	npm install klip -g
+	npm install -g klip
 
 The signiture is:
 
@@ -70,7 +70,7 @@ The signiture is:
 
 For example:
 
-	klip -p -p data/My\ Clippings.txt data/clippings.json
+	klip -pt data/My\ Clippings.txt data/clippings.json
 
 Or you can access the help via
 
