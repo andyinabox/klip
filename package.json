@@ -11,15 +11,15 @@
     "books"
   ],
   "repository": {
-  	"type":"git",
-  	"url":"https://github.com/andyinabox/klip"
+    "type": "git",
+    "url": "https://github.com/andyinabox/klip"
   },
   "license": "MIT",
   "devDependencies": {
     "mocha": "~1.17.1"
   },
   "scripts": {
-    "test" : "mocha"
+    "test": "mocha"
   },
   "bin": "./bin/cli.js"
 }
