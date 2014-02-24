@@ -9,7 +9,7 @@ var assert = require('assert'),
 
 	// vars
 	testFromPath = 'data/My\ Clippings.txt',
-	testToPath = 'data/clippings.json';
+	testToPath = 'data/my_clippings.json';
 
 
 describe('klip', function(){
@@ -48,7 +48,7 @@ describe('klip', function(){
 		});
 
 		it('should export without error', function(done){
-			klip.exportJson(testFromPath, testToPath, done);
+			klip.exportJson(testFromPath, testToPath, {pretty: true}, done);
 		});		
 
 		it('should export actual file', function(done){
@@ -56,7 +56,7 @@ describe('klip', function(){
 				fs.unlinkSync(testToPath)
 			}
 
-			klip.exportJson(testFromPath, testToPath, function(err){
+			klip.exportJson(testFromPath, testToPath, {pretty: true}, function(err){
 				if(err){
 					done(err);
 				}

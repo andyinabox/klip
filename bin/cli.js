@@ -129,7 +129,7 @@ function help() {
 	console.log('   -h - show help');
 
 	Object.keys(optionFlags).forEach(function(flag) {
-		console.log('   -'+flag+' - set options.'+optionFlags[flag].key+'to '+optionFlags[flag].value);
+		console.log('   -'+flag+' - set options.'+optionFlags[flag].key+' to '+optionFlags[flag].value);
 	});
 
 	process.exit(0);
