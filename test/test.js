@@ -1,15 +1,20 @@
+/**
+ * Tests for klip
+ */
+
 'use strict'
 
 	// core libs
-var assert = require('assert'),
-	fs = require('fs'),
+var assert = require('assert')
+	, fs = require('fs')
 
 	// app modules
-	klip = require('../klip'),
+	, klip = require('../klip')
 
 	// vars
-	testFromPath = 'data/My\ Clippings.txt',
-	testToPath = 'data/my_clippings.json';
+	, testFromPath = 'data/My\ Clippings.txt'
+	, testToPath = 'data/my_clippings.json'
+	, kindleFromPath = '/Volumes/Kindle/documents/My\ Clippings.txt';
 
 
 describe('klip', function(){
@@ -34,6 +39,7 @@ describe('klip', function(){
 				done();
 			});
 		});
+
 	});
 
 
