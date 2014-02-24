@@ -21,7 +21,6 @@ If you plan to use it as a command line utility, install globally:
 
 Parses the given file into a JavaScript object.
 
-_Note: currently it's assumed that the document you're parsing uses the same values for EOL etc. that your OS uses. This is not a safe assumption, and when parsing directly from the kindle on the mac the file will not parse correctly. Working on this one._
 
 #### options
 

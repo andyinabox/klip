@@ -1,6 +1,6 @@
 {
   "name": "klip",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "A simple tool for parsing Kindle clippings into javascript",
   "author": "Andy Dayton <admayton@gmail.com>",
   "main": "klip.js",

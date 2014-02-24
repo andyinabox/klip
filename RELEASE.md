@@ -4,6 +4,9 @@ klip
 Release Notes
 -------------
 
+### 0.0.9
+ * Fixed line ending issue when reading directly from Kindle on *nix machine
+
 ### 0.0.8
  * Fixed CLI functionality in global module
  * Updated README
