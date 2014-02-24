@@ -1,6 +1,13 @@
+'use strict'
+
+	// core libs
 var assert = require('assert'),
 	fs = require('fs'),
-	klip = require('../index'),
+
+	// app modules
+	klip = require('../klip'),
+
+	// vars
 	testFromPath = 'data/My\ Clippings.txt',
 	testToPath = 'data/clippings.json';
 

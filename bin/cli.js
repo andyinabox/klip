@@ -1,5 +1,14 @@
+#!/usr/bin/env node
+
+'use strict';
+
+	// core libs
 var fs = require('fs'),
-	exportJson = require('./exporter'),
+
+	// app modules
+	exportJson = require('../lib/exporter'),
+
+	// vars
 
 	// a regex for detecting option flags
 	flagRegExp = /-([A-z])+/,
@@ -29,11 +38,13 @@ var fs = require('fs'),
 		}
 	};
 
-
-function run() {
+/**
+ * Run the cli tool!
+ * 
+ * @param  {Array} [args] Command-line aguments (`process.argv`)
+ */
+function run(args) {
 	var options = {};
-
-	args = process.argv;
 
 	if(args[0] === 'node') {
 		args = args.slice(2);
@@ -82,6 +93,13 @@ function run() {
 
 }
 
+
+/**
+ * Get an options object from the given flags.
+ * 
+ * @param  {Array} [flags] An array containing single-character flags
+ * @return {Object} An options configuration object based on the given flags
+ */
 function getOptions(flags) {
 	var options = {};
 
@@ -98,7 +116,13 @@ function getOptions(flags) {
 	return options;
 }
 
+
+/**
+ * Show help message.
+ */
 function help() {
+
+	console.log('');
 
 	console.log('klip -[flags] [input] [output]');
 
@@ -111,6 +135,8 @@ function help() {
 	process.exit(0);
 }
 
-module.exports = {
-	run: run
+// detect if being run from the command line
+// http://nodejs.org/docs/latest/api/all.html#all_accessing_the_main_module
+if(require.main === module && process.argv.length) {
+	run(process.argv);
 }

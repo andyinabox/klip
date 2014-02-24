@@ -3,7 +3,7 @@
   "version": "0.0.7",
   "description": "A simple tool for parsing Kindle clippings into javascript",
   "author": "Andy Dayton <admayton@gmail.com>",
-  "main": "index.js",
+  "main": "klip.js",
   "keywords": [
     "amazon",
     "kindle",
@@ -21,5 +21,5 @@
   "scripts": {
     "test" : "mocha"
   },
-  "bin": "./index.js"
+  "bin": "./bin/cli.js"
 }
