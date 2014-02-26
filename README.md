@@ -1,7 +1,7 @@
 klip
 =====
 
-A simple tool for parsing Kindle clippings. It will parse the format used in the `My Clippings.txt` file on your kindle serve it to you as a JavaScript object. You can also parse directly to a `.json` file, a feature which is also accessible via the command-line interface.
+A simple tool for parsing Kindle clippings. It will parse the format used in the `My Clippings.txt` file on your kindle serve it to you as a JavaScript object. You can also parse directly to a `.json` file, a feature which is also accessible via a command line interface.
 
 See an example of the output in [`test/data/my_clippings.json`](data/my_clippings.json).
 
@@ -78,15 +78,17 @@ You can also run klip as a command-line tool. If you plan to use this functional
 
 The signiture is:
 
-	klip -[flags] [input] [output]
-	   -h - show help
-	   -u - ugly exporter (not formatted)
-	   -t - organize by title
-	   -a - organize by author
+```bash
+klip -[flags] [input] [output]
+   -h - show help
+   -u - set options.pretty to false
+   -t - set options.organizeBy to title
+   -a - set options.organizeBy to author
+ ```
 
 For example:
 
-	klip -pt data/My\ Clippings.txt data/my_clippings.json
+	klip -ut test/data/My\ Clippings.txt test/data/my_clippings.json
 
 Or you can access the help via
 
