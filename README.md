@@ -3,7 +3,7 @@ klip
 
 A simple tool for parsing Kindle clippings. It will parse the format used in the `My Clippings.txt` file on your kindle serve it to you as a JavaScript object. You can also parse directly to a `.json` file, a feature which is also accessible via a command line interface.
 
-See an example of the output in [`test/data/my_clippings.json`](data/my_clippings.json).
+See an example of the output in [`test/data/my_clippings.json`](test/data/my_clippings.json).
 
 ## Installation
 
