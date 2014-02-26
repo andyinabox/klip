@@ -23,10 +23,11 @@ Parses the given file into a JavaScript object.
 
 #### callback
 
-The callback returns two arguments
+The callback returns three arguments
 
  * `err`: returns an error if there is one
  * `data`: contents of the files as a javascript object
+ * 'raw' : contents of the original text file
 
 #### example
 

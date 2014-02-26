@@ -29,15 +29,24 @@ describe('klip', function(){
 		});
 
 		it('should parse without error', function(done){
-			klip.parse(testFromPath, {pretty: true}, done);
+			klip.parse(testFromPath, done);
 		});
 
 		it('should return an object with length > 0', function(done){
-			klip.parse(testFromPath, {pretty: true}, function(err, data){
+			klip.parse(testFromPath, function(err, data){
 				assert.ok(data.length > 0);
 				done();
 			});
-		});		
+		});
+
+		it('should return the raw data (original text file)', function(done) {
+			klip.parse(testFromPath, function(err, data, raw) {
+				fs.readFile(testFromPath, 'utf8', function(err, orig){
+					assert.equal(raw, orig, 'raw not equel to original');
+					done();
+				})
+			});
+		});
 
 	});
 
