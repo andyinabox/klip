@@ -4,6 +4,10 @@ klip
 Release Notes
 -------------
 
+### 0.2.0
+
+ - updated `#parse()` so that it returns raw text as third argument
+
 ### 0.1.2
 
  - updated README
