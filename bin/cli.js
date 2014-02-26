@@ -11,7 +11,7 @@ var fs = require('fs'),
 	// vars
 
 	// a regex for detecting option flags
-	flagRegExp = /-([A-z])+/,
+	flagRegExp = /-([A-z]+)/,
 
 	// will store our arguments
 	args = [],
@@ -58,14 +58,11 @@ function run(args) {
 	// check for flags
 	if (flagRegExp.test(args[0])) {
 
-		// run regex on flags
-		flags = flagRegExp.exec(args[0]);
+		// run regex on flags, split into individual characters
+		flags = flagRegExp.exec(args[0])[1].split('');
 
 		// remove flags
 		args.shift();
-
-		// remove first array value
-		flags.shift();
 
 		// show help
 		if(flags.indexOf('h') > -1) {

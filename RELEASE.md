@@ -4,6 +4,11 @@ klip
 Release Notes
 -------------
 
+### 0.1.2
+
+ - updated README
+ - fixed flag parsing issue in CLI
+
 ### 0.1.0
 
  - add `organizeBy` option to exporter
