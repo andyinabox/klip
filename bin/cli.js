@@ -24,17 +24,17 @@ var fs = require('fs'),
 
 	// set option flags
 	optionFlags = {
-		'p' : {
+		'u' : {
 			key: 'pretty',
-			value: true
+			value: false
 		},
 		't' : {
-			key: 'sortByTitle',
-			value: true
+			key: 'organizeBy',
+			value: 'title'
 		},
 		'a' : {
-			key: 'sortByAuthor',
-			value: true			
+			key: 'organizeBy',
+			value: 'author'			
 		}
 	};
 

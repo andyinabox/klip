@@ -16,10 +16,14 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "mocha": "~1.17.1"
+    "mocha": "~1.17.1",
+    "dotenv": "~0.2.4"
   },
   "scripts": {
     "test": "mocha"
   },
-  "bin": "./bin/cli.js"
+  "bin": "./bin/cli.js",
+  "dependencies": {
+    "underscore": "~1.6.0"
+  }
 }

@@ -3,7 +3,7 @@ klip
 
 A simple tool for parsing Kindle clippings. It will parse the format used in the `My Clippings.txt` file on your kindle serve it to you as a JavaScript object. You can also parse directly to a `.json` file, a feature which is also accessible via the command-line interface.
 
-See an example of the output in [`data/my_clippings.json`](data/my_clippings.json).
+See an example of the output in [`test/data/my_clippings.json`](data/my_clippings.json).
 
 ## Installation
 
@@ -17,14 +17,9 @@ If you plan to use it as a command line utility, install globally:
 
 ## API
 
-### klip.parse(filePath, [options], callback)
+### klip.parse(filePath, callback)
 
 Parses the given file into a JavaScript object.
-
-
-#### options
-
-_There are no configuration options for the parser currently._
 
 #### callback
 
@@ -50,9 +45,13 @@ Parses the given file and saves it as a json file in the output path.
 
 #### options
 
-_Note: You can include options for `klip.parse` in this method and they will get passed along._
-
- * `pretty`: set to `true` if you want json to look pretty (defaults to `false`)
+ * `pretty`: set to `false` if your don't mind ugly JSON (defaults to `true`)
+ * `organizeBy`: Allows you to organize results rather than just returning a flat array of results (defaults to `null`)
+ 	* When passed a `string` the results will be organized hierarchically with that string as a key value. For instance, passing `"title"` will sort by the clipping `title`.
+ 	* When passed as a `function`, that function will be passed the parsed results as its first argument and expect the modified results to be returned. For example:
+	 	```js
+	 	var callback = function (parsed) { return parsed; }
+	 	```
 
 #### callback
 
@@ -81,9 +80,9 @@ The signiture is:
 
 	klip -[flags] [input] [output]
 	   -h - show help
-	   -p - set options.pretty to true
-	   -t - set options.sortByTitle to true
-	   -a - set options.sortByAuthor to true
+	   -u - ugly exporter (not formatted)
+	   -t - organize by title
+	   -a - organize by author
 
 For example:
 
