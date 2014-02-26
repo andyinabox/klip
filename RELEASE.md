@@ -4,6 +4,10 @@ klip
 Release Notes
 -------------
 
+### 0.1.0
+
+ - add `organizeBy` option to exporter
+
 ### 0.0.9
  * Fixed line ending issue when reading directly from Kindle on *nix machine
 
@@ -29,22 +33,5 @@ Future Milestones
 -----------------
 
 
-
-
-### 0.1.0
-
- - add `groupBooks` option to parser
- - BUG: when reading directly from Kindle, the document format is different so it doesn't parse correctly
-
-### 0.3.0
-
- - Improve testing
- 	- Test timestamp parsing
- 	- Test title parsing
- 	- Test for line ending issues
-
-### 1.0.0
-
-- Stable release
 
 
